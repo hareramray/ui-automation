@@ -80,7 +80,3 @@ The default example includes a YouTube search automation test that:
 ## Contributing
 
 Feel free to submit issues and enhancement requests.
-
-## License
-
-[LICENSE]
