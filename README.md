@@ -21,9 +21,10 @@ This project is an automated testing framework that uses Playwright with Model C
 2. Install the required Python packages:
 ```bash
 pip install langchain-google-genai python-dotenv langchain-ollama mcp_use
-
+```
 Or,
 
+```bash
 pip install -r requirement.txt
 
 ```
