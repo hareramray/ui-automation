@@ -9,25 +9,12 @@ from file_agent import FileAgent
 async def main():
     # Load environment variables
     load_dotenv()
-
-    #Uncomment the following lines to check available models
-    import google.generativeai as genai
-    # os.environ["GOOGLE_API_KEY"] = "<your_google_api_key_here>"
-    GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-    if not GOOGLE_API_KEY:
-        raise ValueError("GOOGLE_API_KEY environment variable not set.")
-    genai.configure(api_key=GOOGLE_API_KEY)
-    models = genai.list_models()
-    for model in models:
-        print(model.name, model.supported_generation_methods)
-
-
     #Create configuration dictionary
     config = {
       "mcpServers": {
         "playwright": {
           "command": "npx",
-          "args": ["@playwright/mcp@latest"],
+          "args": ["@playwright/mcp@latest", "--caps" , "pdf", "--output-dir", "./output"],
           "env": {
             "DISPLAY": ":1"
           }
